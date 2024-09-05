@@ -11,10 +11,11 @@
     }
   }
   
-  requestNotificationPermission();
+  
 
 
   function enviarNotificacao() {
+    requestNotificationPermission();
     if (Notification.permission === 'granted') {
       navigator.serviceWorker.getRegistration().then(reg => {
         const options = {
