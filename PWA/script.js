@@ -1,8 +1,3 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(() => console.log('Service Worker registrado com sucesso'))
-      .catch(error => console.log('Falha no registro do Service Worker:', error));
-  }
 
   function requestNotificationPermission() {
     if (Notification.permission === 'default') {
