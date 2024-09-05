@@ -31,5 +31,5 @@ if ('serviceWorker' in navigator) {
   }
   
   // Exemplo de chamada para enviar notificação
-  document.getElementById('enviarN').addEventListener('click', enviarNotificacao);
+  document.getElementById('enviarN').addEventListener('click', enviarNotificacao());
 
