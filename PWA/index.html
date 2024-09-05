@@ -6,12 +6,19 @@
     <title>PWA</title>
     <link rel="stylesheet" href="style/styles.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="sw" href="sw.js">
 </head>
 <body>
     <div class="box">
         <h2>Enviar notificação</h2>
         <p>Clique no botão para receber uma notificação!</p>
         <button class="enviar">ENVIAR</button>
-    <script src="/Script.js"></script>
   </body>
+
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>  
+
 </html>
