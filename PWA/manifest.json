@@ -1,0 +1,11 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "PWA",
+  "orientation": "portrait",
+  "scope": "/",
+  "short_name": "PWA",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}
