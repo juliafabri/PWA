@@ -1,5 +1,4 @@
-
-  function enviarN() {
+document.getElementById('enviarN').addEventListener('click', function(event) {
     addEventListener("click", () => {
         let promise = Notification.requestPermission();
         // wait for permission
@@ -12,8 +11,10 @@
     } else if (Notification.permission === "granted") {
       // Check whether notification permissions have already been granted;
       // if so, create a notification
-      const notification = new Notification("Hi there!");
-      // …
+      navigator.serviceWorker.ready.then(function(registration) {
+        registration.showNotification("Isso é uma notificação") 
+      })
+
     } else if (Notification.permission !== "denied") {
       // We need to ask the user for permission
       Notification.requestPermission().then((permission) => {
@@ -25,4 +26,4 @@
       });
     }
   }
-  
+)
