@@ -2,10 +2,18 @@
   "background_color": "#ffffff",
   "dir": "ltr",
   "display": "standalone",
-  "name": "PWA - JF",
-  "orientation": "any",
+  "name": "PWA",
+  "orientation": "portrait",
   "scope": "/",
   "short_name": "PWA",
   "start_url": "/",
   "theme_color": "#ffffff"
+  ,
+  "icons": [
+  {
+    "src": "icon/lowres.webp",
+    "sizes": "48x48",
+    "type": "image/webp"
+  }
+]
 }
