@@ -11,7 +11,7 @@
   ,
   "icons": [
   {
-    "src": "icon/lowres.webp",
+    "src": "https://s3.amazonaws.com/appforest_uf/f1654128928475x374316982406253300/pwa-icon.png",
     "sizes": "48x48",
     "type": "image/webp"
   }
