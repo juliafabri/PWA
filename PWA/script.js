@@ -1,13 +1,7 @@
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
-    });
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log('Service Worker registrado com sucesso'))
+      .catch(error => console.log('Falha no registro do Service Worker:', error));
   }
 
   function requestNotificationPermission() {
@@ -25,14 +19,17 @@ if ('serviceWorker' in navigator) {
   requestNotificationPermission();
 
 
-  function showNotification() {
+  function enviarNotificacao() {
     if (Notification.permission === 'granted') {
-      new Notification('Notificação', {
-        body: 'Isso é uma notificação!',
+      navigator.serviceWorker.getRegistration().then(reg => {
+        const options = {
+          body: 'Isso é uma notificação!',
+        };
+        reg.showNotification('Notificação PWA', options);
       });
     }
   }
   
   // Exemplo de chamada para enviar notificação
-  document.getElementById('enviarN').addEventListener('click', showNotification);
+  document.getElementById('enviarN').addEventListener('click', enviarNotificacao);
 
